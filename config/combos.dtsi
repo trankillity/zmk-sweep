@@ -17,7 +17,7 @@ compatible = "zmk,combos";
     timeout-ms = <35>; \
   };
 
-// Brackets
+/* Brackets */
 COMBO(lbrk, &kp LBKT, 6 7, _BASE _NUMB)
 COMBO(rbrk, &kp RBKT, 7 8, _BASE _NUMB)
 COMBO(lpar, &kp LPAR, 16 17, _BASE _NUMB)
@@ -25,7 +25,7 @@ COMBO(rpar, &kp RPAR, 17 18, _BASE _NUMB)
 COMBO(lang, &kp LT, 26 27, _BASE _NUMB)
 COMBO(rang, &kp GT, 27 28, _BASE _NUMB)
 
-// Editing
+/* Editing */
 COMBO(del, &kp DELETE, 14 15, _BASE)
 COMBO(clft, &kp LC(LEFT), 13 14, _BASE)
 COMBO(crgt, &kp LC(RIGHT), 15 16, _BASE)
@@ -35,7 +35,7 @@ COMBO(chme, &kp LC(HOME), 2 3 4, _BASE)
 COMBO(cend, &kp LC(END), 5 6 7, _BASE)
 COMBO(esc, &kp ESC, 4 5, _BASE)
 
-// Symbols
+/* Symbols */
 COMBO(grav, &kp GRAVE, 0 10, _BASE)
 COMBO(tild, &kp TILDE, 10 20, _BASE)
 COMBO(mins, &kp MINUS, 1 11, _BASE)
@@ -48,7 +48,7 @@ COMBO(pipe, &kp PIPE, 19 29, _BASE)
 COMBO(scln, &kp SEMI, 8 18, _BASE)
 COMBO(coln, &kp COLON, 18 28, _BASE)
 
-// System
+/* System */
 COMBO(reset, &reset, 4 5 14 15, _BASE)
 COMBO(bootloader, &bootloader, 14 15 24 25, _BASE)
 COMBO(login, &kp LC(LA(DEL)), 0 10 20, _BASE)
