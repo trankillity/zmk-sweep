@@ -80,7 +80,7 @@
         _NAVI {
                         bindings = <
     &kp TAB     &kp HOME    &kp UP      &kp END     &kp PG_UP          &kp K_MUTE   &none       &none       &none       &none     
-    &kp A       &kp LEFT    &kp DOWN    &kp RIGHT   &kp PG_DN          &kp C_VOL_UP &kp RCTRL   &kp RSHFT   &kp LALT    &kp RGUI  
+    &kp X_SELA  &kp LEFT    &kp DOWN    &kp RIGHT   &kp PG_DN          &kp C_VOL_UP &kp RCTRL   &kp RSHFT   &kp LALT    &kp RGUI  
     &kp X_UNDO  &kp X_CUT   &kp X_COPY  &kp X_PAST  &kp X_REDO         &kp C_VOL_DN &kp C_PREV  &kp C_PP    &kp C_NEXT  &kp C_STOP
                                         &trans      &mo _SYST          &trans       &trans
                         >;

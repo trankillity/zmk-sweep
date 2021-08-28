@@ -8,6 +8,7 @@
 #define NAV_ENT _NAVI ENTER
 #define NUM_BCK _NUMB BACKSPACE
 
+#define X_SELA  C(A)
 #define X_UNDO  C(Z)
 #define X_CUT   C(X)
 #define X_COPY  C(C)

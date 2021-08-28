@@ -14,6 +14,7 @@ compatible = "zmk,combos";
     bindings = <BINDINGS>; \
     key-positions = <KEYPOS>; \
     layers = <LAYERS>; \
+    timeout-ms = <35>; \
   };
 
 // Brackets
@@ -41,6 +42,11 @@ COMBO(mins, &kp MINUS, 1 11, _BASE)
 COMBO(unds, &kp UNDER, 11 21, _BASE)
 COMBO(eqal, &kp EQUAL, 2 12, _BASE)
 COMBO(plus, &kp PLUS, 12 22, _BASE)
+
+COMBO(bsls, &kp BSLH, 9 19, _BASE)
+COMBO(pipe, &kp PIPE, 19 29, _BASE)
+COMBO(scln, &kp SEMI, 8 18, _BASE)
+COMBO(coln, &kp COLON, 18 28, _BASE)
 
 // System
 COMBO(reset, &reset, 4 5 14 15, _BASE)
