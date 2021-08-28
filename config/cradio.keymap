@@ -32,10 +32,14 @@
         };
     };
 
+    combos {
+        #include "combos.dtsi"
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
-        _BASE {
+        base_layer {
                         bindings = <
     &kp Q       &kp W       &kp F       &kp P       &kp B              &kp J       &kp L       &kp U       &kp Y       &kp SQT 
     &hm X_A     &hm X_R     &hm X_S     &hm X_T     &kp G              &kp M       &hm X_N     &hm X_E     &hm X_I     &hm X_O   
@@ -43,7 +47,7 @@
                                         &sk LSHFT   &lt NUM_BCK        &lt NAV_ENT &kp SPC
                         >;
                 };
-        _NUMB {
+        numpad_layer {
                         bindings = <
     &none       &none       &none       &none       &none               &kp KP_EQUAL &kp N7      &kp N8      &kp N9      &kp KP_DOT     
     &kp LGUI    &kp LALT    &kp LSHFT   &kp LCTRL   &none               &kp KP_PLUS  &kp N4      &kp N5      &kp N6      &kp KP_MULTIPLY
@@ -51,7 +55,7 @@
                                         &trans      &trans              &mo _SYST    &kp N0
                         >;
                 };
-        _FUNC {
+        function_layer {
                         bindings = <
     &none       &none       &none       &none       &none              &none       &kp F7      &kp F8      &kp F9      &kp F12
     &kp LGUI    &kp LALT    &kp LSHFT   &kp LCTRL   &none              &none       &kp F4      &kp F5      &kp F6      &kp F11
@@ -59,7 +63,7 @@
                                         &trans      &trans             &mo _SYST   &trans
                         >;
                 };
-        _NAVI {
+        nav_layer {
                         bindings = <
     &kp TAB     &kp HOME    &kp UP      &kp END     &kp PG_UP          &kp K_MUTE   &none       &none       &none       &none     
     &kp X_SELA  &kp LEFT    &kp DOWN    &kp RIGHT   &kp PG_DN          &kp C_VOL_UP &kp RCTRL   &kp RSHFT   &kp LALT    &kp RGUI  
@@ -67,7 +71,7 @@
                                         &trans      &mo _SYST          &trans       &trans
                         >;
                 };
-        _SYST {
+        system_layer {
                         bindings = <
     &bootloader     &none           &out OUT_USB    &out OUT_BLE        &bt BT_CLR         &bt BT_CLR       &out OUT_BLE    &out OUT_USB    &none           &bootloader
     &none           &bt BT_SEL 2    &bt BT_SEL 1    &bt BT_SEL 0        &none              &none            &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &none
