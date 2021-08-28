@@ -8,8 +8,8 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
-#include trankillity.h
-#include combos.dtsi
+#include "trankillity.h"
+#include "combos.dtsi"
 
 &lt {
     tapping-term-ms = <130>;
