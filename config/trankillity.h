@@ -7,12 +7,12 @@
 #define NAV_ENT _NAVI ENTER
 #define NUM_BCK _NUMB BACKSPACE
 
-#define X_SELA C(A)
-#define X_UNDO C(Z)
-#define X_CUT C(X)
-#define X_COPY C(C)
-#define X_PAST C(V)
-#define X_REDO C(Y)
+#define X_SELA LC(A)
+#define X_UNDO LC(Z)
+#define X_CUT LC(X)
+#define X_COPY LC(C)
+#define X_PAST LC(V)
+#define X_REDO LC(Y)
 
 #define X_A LGUI A
 #define X_R LALT R
