@@ -34,6 +34,8 @@ COMBO(end, &kp END, 5 6, 30, _BASE)
 COMBO(chme, &kp LC(HOME), 2 3 4, 40, _BASE)
 COMBO(cend, &kp LC(END), 5 6 7, 40, _BASE)
 COMBO(esc, &kp ESC, 4 5, 30, _BASE)
+COMBO(tab, &kp TAB, 0 1, 30, _BASE)
+COMBO(stab, &kp LS(TAB), 8 9, 30, _BASE)
 
 /* Symbols */
 COMBO(grav, &kp GRAVE, 0 10, 20, _BASE)
