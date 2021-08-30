@@ -51,6 +51,4 @@ COMBO(scln, &kp SEMI, 8 18, 20, _BASE)
 COMBO(coln, &kp COLON, 18 28, 20, _BASE)
 
 /* System */
-COMBO(reset, &reset, 4 5 14 15, 50, _BASE)
-COMBO(bootloader, &bootloader, 14 15 24 25, 50, _BASE)
 COMBO(login, &kp LC(LA(DEL)), 0 10 20, 50, _BASE)

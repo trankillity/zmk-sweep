@@ -30,6 +30,15 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+        ss: super_shift {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS";
+            #binding-cells = <0>;
+            tapping-term-ms = <130>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp LSHFT>, <&sk LSHFT>;
+        };
     };
 
     combos {
@@ -44,12 +53,12 @@
     &kp Q       &kp W       &kp F       &kp P       &kp B              &kp J       &kp L       &kp U       &kp Y       &kp SQT 
     &hm X_A     &hm X_R     &hm X_S     &hm X_T     &kp G              &kp M       &hm X_N     &hm X_E     &hm X_I     &hm X_O   
     &kp Z       &kp X       &kp C       &kp D       &kp V              &kp K       &kp H       &kp COMMA    &kp DOT     &kp FSLH
-                                        &sk LSHFT   &lt NUM_BCK        &lt NAV_ENT &kp SPC
+                                        &ss         &lt NUM_BCK        &lt NAV_ENT &kp SPC
                         >;
                 };
         numpad_layer {
                         bindings = <
-    &none       &none       &none       &none       &none               &kp KP_EQUAL &kp N7      &kp N8      &kp N9      &kp KP_DOT     
+    &none       &none       &none       &none       &none               &kp EQUAL    &kp N7      &kp N8      &kp N9      &kp KP_DOT     
     &kp LGUI    &kp LALT    &kp LCTRL   &kp LSHFT   &none               &kp KP_PLUS  &kp N4      &kp N5      &kp N6      &kp KP_MULTIPLY
     &none       &none       &none       &none       &tog _FUNC          &kp KP_MINUS &kp N1      &kp N2      &kp N3      &kp KP_DIVIDE  
                                         &trans      &trans              &mo _SYST    &kp N0
@@ -75,7 +84,7 @@
                         bindings = <
     &bootloader     &none           &out OUT_USB    &out OUT_BLE        &bt BT_CLR         &bt BT_CLR       &out OUT_BLE    &out OUT_USB    &none           &bootloader
     &none           &bt BT_SEL 2    &bt BT_SEL 1    &bt BT_SEL 0        &none              &none            &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &none
-    &none           &none           &none           &none               &none              &none            &none           &none           &none           &none
+    &reset          &none           &none           &none               &none              &none            &none           &none           &none           &reset
                                                     &trans              &trans             &trans           &trans
                         >;
                 };
