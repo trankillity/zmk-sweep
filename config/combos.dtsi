@@ -18,22 +18,22 @@ compatible = "zmk,combos";
   };
 
 /* Brackets */
-COMBO(lbrk, &kp LBKT, 6 7, 30, _BASE _NUMB)
+COMBO(lbrk, &kp LBKT, 1 2, 30, _BASE _NUMB)
 COMBO(rbrk, &kp RBKT, 7 8, 30, _BASE _NUMB)
-COMBO(lpar, &kp LPAR, 16 17, 30, _BASE _NUMB)
+COMBO(lpar, &kp LPAR, 11 12, 30, _BASE _NUMB)
 COMBO(rpar, &kp RPAR, 17 18, 30, _BASE _NUMB)
-COMBO(lang, &kp LT, 26 27, 30, _BASE _NUMB)
+COMBO(lang, &kp LT, 21 22, 30, _BASE _NUMB)
 COMBO(rang, &kp GT, 27 28, 30, _BASE _NUMB)
 
 /* Editing */
-COMBO(del, &kp DELETE, 14 15, 30, _BASE)
-COMBO(clft, &kp LC(LEFT), 13 14, 30, _BASE)
-COMBO(crgt, &kp LC(RIGHT), 15 16, 30, _BASE)
-COMBO(hme, &kp HOME, 3 4, 30, _BASE)
-COMBO(end, &kp END, 5 6, 30, _BASE)
-COMBO(chme, &kp LC(HOME), 2 3 4, 40, _BASE)
-COMBO(cend, &kp LC(END), 5 6 7, 40, _BASE)
 COMBO(esc, &kp ESC, 4 5, 30, _BASE)
+COMBO(del, &kp DELETE, 14 15, 30, _BASE)
+COMBO(clft, &kp LC(LEFT), 12 13, 30, _BASE)
+COMBO(crgt, &kp LC(RIGHT), 16 17, 30, _BASE)
+COMBO(hme, &kp HOME, 2 3, 30, _BASE)
+COMBO(end, &kp END, 6 7, 30, _BASE)
+COMBO(chme, &kp LC(HOME), 1 2 3, 40, _BASE)
+COMBO(cend, &kp LC(END), 6 7 8, 40, _BASE)
 COMBO(tab, &kp TAB, 0 1, 30, _BASE)
 COMBO(stab, &kp LS(TAB), 8 9, 30, _BASE)
 
