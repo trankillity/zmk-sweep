@@ -11,12 +11,12 @@
 #include "trankillity.h"
 
 &lt {
-    tapping-term-ms = <150>;
+    tapping-term-ms = <130>;
     flavor = "tap-preferred";
 };
 
 &sk {
-     release-after-ms = <2000>;
+     release-after-ms = <500>;
 };
 
 / {
@@ -25,7 +25,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <170>;
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
@@ -34,7 +34,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "STICKY_SHIFT";
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <120>;
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&sk>;
@@ -42,7 +42,7 @@
     };
 
     combos {
-        #include "combos.dtsi"
+        #include "combos.def"
     };
 
     keymap {
@@ -52,8 +52,8 @@
                         bindings = <
     &kp Q       &kp W       &kp F       &kp P       &kp B              &kp J       &kp L       &kp U       &kp Y       &kp SQT 
     &hm X_A     &hm X_R     &hm X_S     &hm X_T     &kp G              &kp M       &hm X_N     &hm X_E     &hm X_I     &hm X_O   
-    &kp Z       &kp X       &kp C       &kp D       &kp V              &kp K       &kp H       &kp COMMA    &kp DOT     &kp FSLH
-                                        &sk LSHIFT  &lt NUM_BCK        &lt NAV_ENT &kp SPC
+    &kp Z       &kp X       &kp C       &kp D       &kp V              &kp K       &kp H       &kp COMMA   &kp DOT     &kp FSLH
+                                        &lt NUM_BCK &ss LSHIFT LSHIFT  &kp SPC     &lt NAV_ENT
                         >;
                 };
         numpad_layer {
@@ -61,7 +61,7 @@
     &none       &none       &none       &none       &none               &kp EQUAL    &kp N7      &kp N8      &kp N9      &kp KP_DOT     
     &kp LGUI    &kp LALT    &kp LCTRL   &kp LSHFT   &none               &kp KP_PLUS  &kp N4      &kp N5      &kp N6      &kp KP_MULTIPLY
     &none       &none       &none       &none       &tog _FUNC          &kp KP_MINUS &kp N1      &kp N2      &kp N3      &kp KP_DIVIDE  
-                                        &trans      &trans              &mo _SYST    &kp N0
+                                        &trans      &trans              &kp N0       &mo _SYST
                         >;
                 };
         function_layer {
@@ -69,7 +69,7 @@
     &none       &none       &none       &none       &none              &none       &kp F7      &kp F8      &kp F9      &kp F12
     &kp LGUI    &kp LALT    &kp LCTRL   &kp LSHFT   &none              &none       &kp F4      &kp F5      &kp F6      &kp F11
     &none       &none       &none       &none       &tog _FUNC         &none       &kp F1      &kp F2      &kp F3      &kp F10
-                                        &trans      &trans             &mo _SYST   &trans
+                                        &trans      &trans             &trans      &mo _SYST
                         >;
                 };
         nav_layer {
@@ -77,14 +77,14 @@
     &kp TAB     &kp HOME    &kp UP      &kp END     &kp PG_UP          &kp K_MUTE   &none       &none       &none       &none     
     &kp X_SELA  &kp LEFT    &kp DOWN    &kp RIGHT   &kp PG_DN          &kp C_VOL_UP &kp RSHFT   &kp RCTRL   &kp LALT    &kp RGUI  
     &kp X_UNDO  &kp X_CUT   &kp X_COPY  &kp X_PAST  &kp X_REDO         &kp C_VOL_DN &kp C_PREV  &kp C_PP    &kp C_NEXT  &kp C_STOP
-                                        &trans      &mo _SYST          &trans       &trans
+                                        &mo _SYST   &trans             &trans       &trans
                         >;
                 };
         system_layer {
                         bindings = <
     &bootloader     &none           &out OUT_USB    &out OUT_BLE        &bt BT_CLR         &bt BT_CLR       &out OUT_BLE    &out OUT_USB    &none           &bootloader
-    &none           &bt BT_SEL 2    &bt BT_SEL 1    &bt BT_SEL 0        &none              &none            &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &none
-    &reset          &none           &none           &none               &none              &none            &none           &none           &none           &reset
+    &none           &none           &none           &none               &none              &none            &none           &none           &none           &none
+    &reset          &bt BT_SEL 2    &bt BT_SEL 1    &bt BT_SEL 0        &none              &none            &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &reset
                                                     &trans              &trans             &trans           &trans
                         >;
                 };
