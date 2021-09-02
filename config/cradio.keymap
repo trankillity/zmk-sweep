@@ -21,7 +21,7 @@
 };
 
 &sl {
-    /delete-property/ quick-release;
+    quick-release = false;
 }
 
 / {
