@@ -20,9 +20,9 @@
      quick-release;
 };
 
-&sl {
-    quick-release = false;
-}
+// &sl {
+//     quick-release = false;
+// }
 
 / {
     behaviors {
