@@ -26,8 +26,6 @@ COMBO(lang, &kp LT, 21 22, 30, _BASE _NUMB)
 COMBO(rang, &kp GT, 27 28, 30, _BASE _NUMB)
 
 /* Editing */
-COMBO(esc, &kp ESC, 4 5, 30, _BASE)
-COMBO(del, &kp DELETE, 14 15, 30, _BASE)
 COMBO(clft, &kp LC(LEFT), 12 13, 30, _BASE)
 COMBO(crgt, &kp LC(RIGHT), 16 17, 30, _BASE)
 COMBO(hme, &kp HOME, 2 3, 30, _BASE)
@@ -52,3 +50,6 @@ COMBO(coln, &kp COLON, 18 28, 20, _BASE)
 
 /* System */
 COMBO(login, &kp LC(LA(DEL)), 0 10 20, 50, _BASE)
+COMBO(esc, &kp ESC, 4 5, 30, _BASE)
+COMBO(del, &kp DELETE, 14 15, 30, _BASE)
+COMBO(caps, &kp CAPS, 24 25, 30, _BASE)
