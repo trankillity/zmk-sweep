@@ -20,6 +20,10 @@
      quick-release;
 };
 
+&sl {
+    /delete-property/ quick-release;
+}
+
 / {
     behaviors {
         hm: homerow_mods {
@@ -54,14 +58,14 @@
     &kp Q       &kp W       &kp F       &kp P       &kp B              &kp J       &kp L       &kp U       &kp Y       &kp SQT 
     &hm X_A     &hm X_R     &hm X_S     &hm X_T     &kp G              &kp M       &hm X_N     &hm X_E     &hm X_I     &hm X_O   
     &kp Z       &kp X       &kp C       &kp D       &kp V              &kp K       &kp H       &kp COMMA   &kp DOT     &kp FSLH
-                                        &lt NUM_BCK &sk LSHIFT  &kp SPC     &lt NAV_ENT
+                                        &lt NUM_BCK &ss LSHIFT LSHIFT  &kp SPC     &lt NAV_ENT
                         >;
                 };
         numpad_layer {
                         bindings = <
     &none       &none       &none       &none       &none               &kp EQUAL    &kp N7      &kp N8      &kp N9      &kp KP_DOT     
     &kp LGUI    &kp LALT    &kp LCTRL   &kp LSHFT   &none               &kp KP_PLUS  &kp N4      &kp N5      &kp N6      &kp KP_MULTIPLY
-    &none       &none       &none       &none       &tog _FUNC          &kp KP_MINUS &kp N1      &kp N2      &kp N3      &kp KP_DIVIDE  
+    &none       &none       &none       &none       &sl _FUNC           &kp KP_MINUS &kp N1      &kp N2      &kp N3      &kp KP_DIVIDE  
                                         &trans      &trans              &kp N0       &mo _SYST
                         >;
                 };
@@ -69,7 +73,7 @@
                         bindings = <
     &none       &none       &none       &none       &none              &none       &kp F7      &kp F8      &kp F9      &kp F12
     &kp LGUI    &kp LALT    &kp LCTRL   &kp LSHFT   &none              &none       &kp F4      &kp F5      &kp F6      &kp F11
-    &none       &none       &none       &none       &tog _FUNC         &none       &kp F1      &kp F2      &kp F3      &kp F10
+    &none       &none       &none       &none       &sl _FUNC          &none       &kp F1      &kp F2      &kp F3      &kp F10
                                         &trans      &trans             &trans      &mo _SYST
                         >;
                 };
