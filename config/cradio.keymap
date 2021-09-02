@@ -22,7 +22,7 @@
 
 &sl {
     /delete-property/ quick-release;
-}
+};
 
 / {
     behaviors {
