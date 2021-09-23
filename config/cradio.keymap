@@ -11,7 +11,7 @@
 #include "trankillity.h"
 
 &lt {
-    tapping-term-ms = <150>;
+    tapping-term-ms = <175>;
     flavor = "tap-preferred";
 };
 
