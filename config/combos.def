@@ -13,8 +13,8 @@ compatible = "zmk,combos";
   combo_##NAME { \
     bindings = <BINDINGS>; \
     key-positions = <KEYPOS>; \
-    layers = <LAYERS>; \
     timeout-ms = <TIMEOUT>; \
+    layers = <LAYERS>; \
   };
 
 /* Brackets */
@@ -26,14 +26,10 @@ COMBO(lang, &kp LT, 21 22, 30, _BASE _NUMB)
 COMBO(rang, &kp GT, 27 28, 30, _BASE _NUMB)
 
 /* Editing */
-COMBO(clft, &kp LC(LEFT), 12 13, 30, _BASE)
-COMBO(crgt, &kp LC(RIGHT), 16 17, 30, _BASE)
-COMBO(hme, &kp HOME, 2 3, 30, _BASE)
-COMBO(end, &kp END, 6 7, 30, _BASE)
-COMBO(chme, &kp LC(HOME), 1 2 3, 40, _BASE)
-COMBO(cend, &kp LC(END), 6 7 8, 40, _BASE)
-COMBO(tab, &kp TAB, 10 11, 30, _BASE)
-COMBO(stab, &kp LS(TAB), 18 19, 30, _BASE)
+COMBO(tab, &kp TAB, 11 12 13, 50, _BASE)
+COMBO(stab, &kp LS(TAB), 16 17 18, 50, _BASE)
+COMBO(hme, &kp HOME, 1 2 3, 50, _BASE)
+COMBO(end, &kp END, 6 7 8, 50, _BASE)
 
 /* Symbols */
 COMBO(grav, &kp GRAVE, 0 10, 20, _BASE)
@@ -59,5 +55,6 @@ COMBO(login, &kp LC(LA(DEL)), 0 10 20, 50, _BASE)
 COMBO(esc, &kp ESC, 4 5, 60, _BASE)
 COMBO(del, &kp DELETE, 14 15, 60, _BASE)
 COMBO(caps, &kp CAPS, 24 25, 60, _BASE)
-COMBO(glft, &kp LG(LEFT), 11 12 13, 40, _BASE)
-COMBO(grgt, &kp LG(RIGHT), 16 17 18, 40, _BASE)
+COMBO(glft, &kp LG(LEFT), 21 22 23, 50, _BASE)
+COMBO(grgt, &kp LG(RIGHT), 26 27 28, 50, _BASE)
+COMBO(syst, &tog _SYST, 20 29, 30, _BASE)
