@@ -11,7 +11,7 @@
 #include "trankillity.h"
 
 &lt {
-    tapping-term-ms = <175>;
+    tapping-term-ms = <150>;
     flavor = "tap-preferred";
 };
 
@@ -44,6 +44,15 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&sk>;
         };
+        tt: to_toggle {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TO_TOGGLE";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&to>, <&tog>;
+        };
     };
 
     combos {
@@ -63,7 +72,7 @@
                 };
         numpad_layer {
                         bindings = <
-    &none       &none       &none       &none       &none               &kp EQUAL    &kp N7      &kp N8      &kp N9      &kp KP_DOT     
+    &tt _NUMB _NUMB       &none       &none       &none       &none               &kp EQUAL    &kp N7      &kp N8      &kp N9      &kp KP_DOT     
     &kp LGUI    &kp LALT    &kp LCTRL   &kp LSHFT   &none               &kp KP_PLUS  &kp N4      &kp N5      &kp N6      &kp KP_MULTIPLY
     &none       &none       &none       &none       &sl _FUNC           &kp KP_MINUS &kp N1      &kp N2      &kp N3      &kp KP_DIVIDE  
                                         &trans      &trans              &kp N0       &trans
@@ -71,7 +80,7 @@
                 };
         function_layer {
                         bindings = <
-    &none       &none       &none       &none       &none              &none       &kp F7      &kp F8      &kp F9      &kp F12
+    &tt _FUNC _FUNC       &none       &none       &none       &none              &none       &kp F7      &kp F8      &kp F9      &kp F12
     &kp LGUI    &kp LALT    &kp LCTRL   &kp LSHFT   &none              &none       &kp F4      &kp F5      &kp F6      &kp F11
     &none       &none       &none       &none       &sl _FUNC          &none       &kp F1      &kp F2      &kp F3      &kp F10
                                         &trans      &trans             &trans      &trans
@@ -79,7 +88,7 @@
                 };
         nav_layer {
                         bindings = <
-    &none       &kp HOME    &kp UP      &kp END     &kp PG_UP          &kp C_MUTE   &none       &none       &none       &none     
+    &kp INS     &kp HOME    &kp UP      &kp END     &kp PG_UP          &kp C_MUTE   &none       &none       &none       &tt _NAVI _NAVI
     &kp X_SELA  &kp LEFT    &kp DOWN    &kp RIGHT   &kp PG_DN          &kp C_VOL_UP &kp RSHFT   &kp RCTRL   &kp LALT    &kp RGUI  
     &kp X_UNDO  &kp X_CUT   &kp X_COPY  &kp X_PAST  &kp X_REDO         &kp C_VOL_DN &kp C_PREV  &kp C_PP    &kp C_NEXT  &kp C_STOP
                                         &trans      &trans             &trans       &trans
