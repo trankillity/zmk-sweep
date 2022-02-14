@@ -16,8 +16,7 @@
 };
 
 &sk {
-     release-after-ms = <1000>;
-     quick-release;
+     release-after-ms = <3000>;
 };
 
 &sl {
@@ -26,6 +25,14 @@
 
 / {
     behaviors {
+        skq: sticky_key_quick_release {
+            compatible = "zmk,behavior-sticky-key";
+            label = "STICKY_KEY_QUICK_RELEASE";
+            #binding-cells = <1>;
+            bindings = <&kp>;
+            release-after-ms = <1000>;
+            quick-release;
+        };
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
@@ -38,6 +45,15 @@
         ss: sticky_shift {
             compatible = "zmk,behavior-hold-tap";
             label = "STICKY_SHIFT";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&skq>;
+        };
+        sm: sticky_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "STICKY_MODS";
             #binding-cells = <2>;
             tapping-term-ms = <150>;
             quick_tap_ms = <0>;
@@ -64,7 +80,7 @@
         numpad_layer {
                         bindings = <
     &none       &none       &none       &none       &none               &kp EQUAL    &kp N7      &kp N8      &kp N9      &kp KP_DOT     
-    &kp LGUI    &kp LALT    &kp LCTRL   &kp LSHFT   &none               &kp KP_PLUS  &kp N4      &kp N5      &kp N6      &kp KP_MULTIPLY
+    &sm LGUI    &sm LALT    &sm LCTRL   &sm LSHFT   &none               &kp KP_PLUS  &kp N4      &kp N5      &kp N6      &kp KP_MULTIPLY
     &none       &none       &none       &none       &sl _FUNC           &kp KP_MINUS &kp N1      &kp N2      &kp N3      &kp KP_DIVIDE  
                                         &trans      &trans              &kp N0       &trans
                         >;
@@ -72,7 +88,7 @@
         function_layer {
                         bindings = <
     &none       &none       &none       &none       &none              &none       &kp F7      &kp F8      &kp F9      &kp F12
-    &kp LGUI    &kp LALT    &kp LCTRL   &kp LSHFT   &none              &none       &kp F4      &kp F5      &kp F6      &kp F11
+    &sm LGUI    &sm LALT    &sm LCTRL   &sm LSHFT   &none              &none       &kp F4      &kp F5      &kp F6      &kp F11
     &none       &none       &none       &none       &sl _FUNC          &none       &kp F1      &kp F2      &kp F3      &kp F10
                                         &trans      &trans             &trans      &trans
                         >;
@@ -80,7 +96,7 @@
         nav_layer {
                         bindings = <
     &kp INS     &kp HOME    &kp UP      &kp END     &kp PG_UP          &kp C_MUTE   &none       &none       &none       &none
-    &kp X_SELA  &kp LEFT    &kp DOWN    &kp RIGHT   &kp PG_DN          &kp C_VOL_UP &kp RSHFT   &kp RCTRL   &kp LALT    &kp RGUI  
+    &kp X_SELA  &kp LEFT    &kp DOWN    &kp RIGHT   &kp PG_DN          &kp C_VOL_UP &sm RSHFT   &sm RCTRL   &sm LALT    &sm RGUI  
     &kp X_UNDO  &kp X_CUT   &kp X_COPY  &kp X_PAST  &kp X_REDO         &kp C_VOL_DN &kp C_PREV  &kp C_PP    &kp C_NEXT  &kp C_STOP
                                         &trans      &trans             &trans       &trans
                         >;
