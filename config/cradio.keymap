@@ -66,6 +66,7 @@
             #binding-cells = <0>;
             bindings = <&kp COMMA>, <&kp SEMI>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
+            masked_mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         dotcln: dot_colon {
             compatible = "zmk,behavior-mod-morph";
@@ -73,6 +74,7 @@
             #binding-cells = <0>;
             bindings = <&kp DOT>, <&kp COLON>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
+            masked_mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
 
