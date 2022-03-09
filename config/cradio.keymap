@@ -60,11 +60,18 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&sk>;
         };
-        so: shift_override {
+        comscl: comma_semicolon {
             compatible = "zmk,behavior-mod-morph";
-            label = "SHIFT_OVERRIDE";
-            #binding-cells = <2>;
-            bindings = <&kp>, <&kp>;
+            label = "COMMA_SEMICOLON";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA>, <&kp SEMI>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        dotcln: dot_colon {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DOT_COLON";
+            #binding-cells = <0>;
+            bindings = <&kp DOT>, <&kp COLON>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
@@ -80,7 +87,7 @@
                         bindings = <
     &kp Q       &kp W       &kp F       &kp P       &kp B              &kp J       &kp L       &kp U       &kp Y       &kp SQT 
     &hm X_A     &hm X_R     &hm X_S     &hm X_T     &kp G              &kp M       &hm X_N     &hm X_E     &hm X_I     &hm X_O   
-    &kp Z       &kp X       &kp C       &kp D       &kp V              &kp K       &kp H       &so COMMA SEMI   &so DOT COLON     &kp FSLH
+    &kp Z       &kp X       &kp C       &kp D       &kp V              &kp K       &kp H       &comscl     &dotcln     &kp FSLH
                                         &lt NUM_BCK &ss LSHIFT LSHIFT  &kp SPC     &lt NAV_ENT
                         >;
                 };
