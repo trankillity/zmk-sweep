@@ -22,3 +22,5 @@
 #define X_E RCTRL   E
 #define X_I LALT    I
 #define X_O RGUI    O
+
+#define AC(keycode) &am LC(keycode) keycode

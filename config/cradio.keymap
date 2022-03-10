@@ -33,6 +33,15 @@
             release-after-ms = <1000>;
             quick-release;
         };
+        am: auto_mod {
+            compatible = "zmk,behavior-hold-tap";
+            label = "AUTO_MOD";
+            #binding-cells = <2>;
+            tapping_term_ms = <135>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
         comscl: comma_semicolon {
             compatible = "zmk,behavior-mod-morph";
             label = "COMMA_SEMICOLON";
@@ -59,9 +68,9 @@
 
         base_layer {
                         bindings = <
-    &kp Q       &kp W       &kp F       &kp P       &kp B              &kp J       &kp L       &kp U       &kp Y       &kp SQT 
-    &kp A       &kp R       &kp S       &kp T       &kp G              &kp M       &kp N       &kp E       &kp I       &kp O
-    &kp Z       &kp X       &kp C       &kp D       &kp V              &kp K       &kp H       &comscl     &dotcln     &kp FSLH
+    AC(Q)       AC(W)       AC(F)       AC(P)       AC(B)              AC(J)       AC(L)       AC(U)       AC(Y)       AC(SQT) 
+    AC(A)       AC(R)       AC(S)       AC(T)       AC(G)              AC(M)       AC(N)       AC(E)       AC(I)       AC(O)
+    AC(Z)       AC(X)       AC(C)       AC(D)       AC(V)              AC(K)       AC(H)       AC(&comscl) AC(&dotcln) AC(FSLH)
                                         &lt NUM_BCK &skq LSHIFT        &kp SPC     &lt NAV_ENT
                         >;
                 };
