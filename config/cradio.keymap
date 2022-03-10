@@ -70,7 +70,7 @@
                         bindings = <
     AC(Q)       AC(W)       AC(F)       AC(P)       AC(B)              AC(J)       AC(L)       AC(U)       AC(Y)       AC(SQT) 
     AC(A)       AC(R)       AC(S)       AC(T)       AC(G)              AC(M)       AC(N)       AC(E)       AC(I)       AC(O)
-    AC(Z)       AC(X)       AC(C)       AC(D)       AC(V)              AC(K)       AC(H)       AC(&comscl) AC(&dotcln) AC(FSLH)
+    AC(Z)       AC(X)       AC(C)       AC(D)       AC(V)              AC(K)       AC(H)       &comscl     &dotcln     AC(FSLH)
                                         &lt NUM_BCK &skq LSHIFT        &kp SPC     &lt NAV_ENT
                         >;
                 };
