@@ -56,6 +56,7 @@
             bindings = <&kp DOT>, <&kp COLON>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+        /*
         spcundr: space_underscore {
             compatible = "zmk,behavior-mod-morph";
             label = "SPACE_UNDERSCORE";
@@ -63,6 +64,7 @@
             bindings = <&kp SPC>, <&kp MINUS>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+        */
     };
 
     combos {
@@ -77,7 +79,7 @@
     AC(Q)       AC(W)       AC(F)       AC(P)       AC(B)              AC(J)       AC(L)       AC(U)       AC(Y)       AC(SQT) 
     AC(A)       AC(R)       AC(S)       AC(T)       AC(G)              AC(M)       AC(N)       AC(E)       AC(I)       AC(O)
     AC(Z)       AC(X)       AC(C)       AC(D)       AC(V)              AC(K)       AC(H)       &comscl     &dotcln     AC(FSLH)
-                                        &lt NUM_BCK &skq LSHIFT        &spcundr    &lt NAV_ENT
+                                        &lt NUM_BCK &skq LSHIFT        &kp SPC     &lt NAV_ENT
                         >;
                 };
         numpad_layer {
