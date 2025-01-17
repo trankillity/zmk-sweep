@@ -1,0 +1,59 @@
+/*                KEY POSITIONS
+
+  ╭────────────────────╮ ╭────────────────────╮
+  │  0   1   2   3   4 │ │  5   6   7   8   9 │
+  │ 10  11  12  13  14 │ │ 15  16  17  18  19 │
+  │ 20  21  22  23  24 │ │ 25  26  27  28  29 │
+  ╰───────────╮ 30  31 │ │ 32  33 ╭───────────╯
+              ╰────────╯ ╰────────╯            */
+
+compatible = "zmk,combos";
+
+#define COMBO(NAME, BINDINGS, KEYPOS, TIMEOUT, LAYERS) \
+  combo_##NAME { \
+    bindings = <BINDINGS>; \
+    key-positions = <KEYPOS>; \
+    timeout-ms = <TIMEOUT>; \
+    layers = <LAYERS>; \
+  };
+
+/* System */
+COMBO(login, &kp LC(LA(DEL)), 0 1 8 9, 75, BASE)
+COMBO(esc, &kp ESC, 0 1, 80, BASE)
+COMBO(caps, &kp CAPS, 24 25, 80, BASE)
+// COMBO(syst, &tg FUNC, 20 29, 80, BASE FUNC)
+
+/* Brackets */
+COMBO(lbrk, &kp LBKT, 1 2, 20, BASE NUMB)
+COMBO(rbrk, &kp RBKT, 7 8, 20, BASE NUMB)
+COMBO(lpar, &kp LPAR, 11 12, 20, BASE NUMB)
+COMBO(rpar, &kp RPAR, 17 18, 20, BASE NUMB)
+COMBO(lang, &kp LT, 21 22, 20, BASE NUMB)
+COMBO(rang, &kp GT, 27 28, 20, BASE NUMB)
+
+/* Editing */
+// COMBO(tab, &kp TAB, 11 12 13, 40, BASE)
+// COMBO(stab, &kp LS(TAB), 16 17 18, 40, BASE)
+// COMBO(hme, &kp HOME, 1 2 3, 40, BASE)
+// COMBO(end, &kp END, 6 7 8, 40, BASE)
+// COMBO(glft, &kp LG(LEFT), 21 22 23, 40, BASE)
+// COMBO(grgt, &kp LG(RIGHT), 26 27 28, 40, BASE)
+
+/* Symbols */
+// COMBO(grav, &kp GRAVE, 0 10, 30, BASE)
+// COMBO(tild, &kp TILDE, 10 20, 30, BASE)
+// COMBO(excl, &kp EXCL, 1 11, 30, BASE)
+// COMBO(ampr, &kp AMPS, 11 21, 30, BASE)
+// COMBO(at, &kp AT, 2 12, 30, BASE)
+// COMBO(astr, &kp STAR, 12 22, 30, BASE)
+// COMBO(hash, &kp HASH, 3 13, 30, BASE)
+// COMBO(perc, &kp PRCNT, 13 23, 30, BASE)
+
+// COMBO(mins, &kp MINUS, 6 16, 30, BASE)
+// COMBO(unds, &kp UNDER, 16 26, 30, BASE)
+// COMBO(plus, &kp PLUS, 7 17, 30, BASE)
+// COMBO(scln, &kp SEMI, 17 27, 30, BASE)
+// COMBO(eqal, &kp EQUAL, 8 18, 30, BASE)
+// COMBO(coln, &kp COLON, 18 28, 30, BASE)
+// COMBO(bsls, &kp BSLH, 9 19, 30, BASE)
+// COMBO(pipe, &kp PIPE, 19 29, 30, BASE)
