@@ -38,7 +38,7 @@
             tapping-term-ms = <300>;
             quick-tap-ms = <175>;
             require-prior-idle-ms = <150>;
-        }
+        };
         skq: sticky_key_quick_release {
             compatible = "zmk,behavior-sticky-key";
             #binding-cells = <1>;
